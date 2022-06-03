@@ -13,6 +13,6 @@ CMD [ "/sample" ]
 
 FROM alpine:3.16
 COPY --from=builder /sample /bin
-COPY --from=builder /go /go
+COPY --from=builder /go/pkg/mod/github.com/razorpay/ifsc /go/pkg/mod/github.com/razorpay/ifsc
 
 ENTRYPOINT [ "/bin/sample" ]
